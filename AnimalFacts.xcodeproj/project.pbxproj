@@ -11,6 +11,7 @@
 		029A05512C568F0D0068C177 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A05502C568F0D0068C177 /* ContentView.swift */; };
 		029A05532C568F0F0068C177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029A05522C568F0F0068C177 /* Assets.xcassets */; };
 		029A05562C568F0F0068C177 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029A05552C568F0F0068C177 /* Preview Assets.xcassets */; };
+		029A05642C568FC90068C177 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 029A05632C568FC90068C177 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029A05642C568FC90068C177 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +53,13 @@
 		029A054D2C568F0D0068C177 /* AnimalFacts */ = {
 			isa = PBXGroup;
 			children = (
-				029A054E2C568F0D0068C177 /* AnimalFactsApp.swift */,
+				029A055C2C568F3F0068C177 /* App */,
+				029A055D2C568F4B0068C177 /* Features */,
+				029A05612C568F850068C177 /* Models */,
+				029A055F2C568F760068C177 /* Services */,
+				029A05602C568F7D0068C177 /* Shared */,
+				029A055E2C568F5B0068C177 /* Resourses */,
 				029A05502C568F0D0068C177 /* ContentView.swift */,
-				029A05522C568F0F0068C177 /* Assets.xcassets */,
 				029A05542C568F0F0068C177 /* Preview Content */,
 			);
 			path = AnimalFacts;
@@ -65,6 +71,50 @@
 				029A05552C568F0F0068C177 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		029A055C2C568F3F0068C177 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				029A054E2C568F0D0068C177 /* AnimalFactsApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		029A055D2C568F4B0068C177 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		029A055E2C568F5B0068C177 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				029A05522C568F0F0068C177 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		029A055F2C568F760068C177 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		029A05602C568F7D0068C177 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		029A05612C568F850068C177 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +133,9 @@
 			dependencies = (
 			);
 			name = AnimalFacts;
+			packageProductDependencies = (
+				029A05632C568FC90068C177 /* ComposableArchitecture */,
+			);
 			productName = AnimalFacts;
 			productReference = 029A054B2C568F0D0068C177 /* AnimalFacts.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +164,9 @@
 				Base,
 			);
 			mainGroup = 029A05422C568F0D0068C177;
+			packageReferences = (
+				029A05622C568FC90068C177 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 029A054C2C568F0D0068C177 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,6 +335,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +364,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,6 +400,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		029A05622C568FC90068C177 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.12.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		029A05632C568FC90068C177 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 029A05622C568FC90068C177 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 029A05432C568F0D0068C177 /* Project object */;
 }
