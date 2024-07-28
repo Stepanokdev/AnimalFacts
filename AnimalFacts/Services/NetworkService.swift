@@ -20,7 +20,7 @@ extension NetworkService: DependencyKey {
             
             // Check if we have cached data and if it's not too old
             if let lastRefresh = UserDefaults.standard.object(forKey: Constants.lastRefreshKey) as? Date,
-               Date().timeIntervalSince(lastRefresh) < 36 { // 1 hour cache
+               Date().timeIntervalSince(lastRefresh) < 3600 { // 1 hour cache
                 return RealmManager.shared.getCategories()
             }
             
