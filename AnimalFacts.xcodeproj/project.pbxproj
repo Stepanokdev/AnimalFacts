@@ -15,6 +15,14 @@
 		029A05662C56910E0068C177 /* AnimalCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A05652C56910E0068C177 /* AnimalCategory.swift */; };
 		029A05682C5691300068C177 /* AnimalFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A05672C5691300068C177 /* AnimalFact.swift */; };
 		029A056A2C56914A0068C177 /* CategoryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A05692C56914A0068C177 /* CategoryStatus.swift */; };
+		029A056D2C569AB90068C177 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A056C2C569AB90068C177 /* LoadingView.swift */; };
+		029A056F2C569AC90068C177 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A056E2C569AC90068C177 /* ErrorView.swift */; };
+		029A05732C569B200068C177 /* AnimalCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A05722C569B200068C177 /* AnimalCategoriesView.swift */; };
+		029A05752C569B330068C177 /* AnimalCategoriesFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A05742C569B330068C177 /* AnimalCategoriesFeature.swift */; };
+		029A05772C569B480068C177 /* AnimalFactsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A05762C569B480068C177 /* AnimalFactsFeature.swift */; };
+		029A05792C569B590068C177 /* AnimalFactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A05782C569B590068C177 /* AnimalFactsView.swift */; };
+		029A057B2C569BEE0068C177 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A057A2C569BEE0068C177 /* NetworkService.swift */; };
+		029A057D2C569C170068C177 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A057C2C569C170068C177 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		029A05652C56910E0068C177 /* AnimalCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCategory.swift; sourceTree = "<group>"; };
 		029A05672C5691300068C177 /* AnimalFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFact.swift; sourceTree = "<group>"; };
 		029A05692C56914A0068C177 /* CategoryStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryStatus.swift; sourceTree = "<group>"; };
+		029A056C2C569AB90068C177 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		029A056E2C569AC90068C177 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		029A05722C569B200068C177 /* AnimalCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCategoriesView.swift; sourceTree = "<group>"; };
+		029A05742C569B330068C177 /* AnimalCategoriesFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCategoriesFeature.swift; sourceTree = "<group>"; };
+		029A05762C569B480068C177 /* AnimalFactsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFactsFeature.swift; sourceTree = "<group>"; };
+		029A05782C569B590068C177 /* AnimalFactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFactsView.swift; sourceTree = "<group>"; };
+		029A057A2C569BEE0068C177 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		029A057C2C569C170068C177 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +106,8 @@
 		029A055D2C568F4B0068C177 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				029A05702C569AEC0068C177 /* AnimalCategories */,
+				029A05712C569AF60068C177 /* AnimalFacts */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -105,6 +123,7 @@
 		029A055F2C568F760068C177 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				029A057A2C569BEE0068C177 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -112,6 +131,8 @@
 		029A05602C568F7D0068C177 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				029A056B2C569AAB0068C177 /* UI */,
+				029A057C2C569C170068C177 /* Constants.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -124,6 +145,33 @@
 				029A05692C56914A0068C177 /* CategoryStatus.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		029A056B2C569AAB0068C177 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				029A056C2C569AB90068C177 /* LoadingView.swift */,
+				029A056E2C569AC90068C177 /* ErrorView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		029A05702C569AEC0068C177 /* AnimalCategories */ = {
+			isa = PBXGroup;
+			children = (
+				029A05722C569B200068C177 /* AnimalCategoriesView.swift */,
+				029A05742C569B330068C177 /* AnimalCategoriesFeature.swift */,
+			);
+			path = AnimalCategories;
+			sourceTree = "<group>";
+		};
+		029A05712C569AF60068C177 /* AnimalFacts */ = {
+			isa = PBXGroup;
+			children = (
+				029A05762C569B480068C177 /* AnimalFactsFeature.swift */,
+				029A05782C569B590068C177 /* AnimalFactsView.swift */,
+			);
+			path = AnimalFacts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,11 +250,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029A05792C569B590068C177 /* AnimalFactsView.swift in Sources */,
+				029A05772C569B480068C177 /* AnimalFactsFeature.swift in Sources */,
+				029A05732C569B200068C177 /* AnimalCategoriesView.swift in Sources */,
 				029A05662C56910E0068C177 /* AnimalCategory.swift in Sources */,
 				029A05512C568F0D0068C177 /* ContentView.swift in Sources */,
 				029A054F2C568F0D0068C177 /* AnimalFactsApp.swift in Sources */,
+				029A05752C569B330068C177 /* AnimalCategoriesFeature.swift in Sources */,
+				029A057D2C569C170068C177 /* Constants.swift in Sources */,
 				029A056A2C56914A0068C177 /* CategoryStatus.swift in Sources */,
+				029A056F2C569AC90068C177 /* ErrorView.swift in Sources */,
 				029A05682C5691300068C177 /* AnimalFact.swift in Sources */,
+				029A057B2C569BEE0068C177 /* NetworkService.swift in Sources */,
+				029A056D2C569AB90068C177 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
