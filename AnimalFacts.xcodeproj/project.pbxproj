@@ -23,6 +23,9 @@
 		029A05792C569B590068C177 /* AnimalFactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A05782C569B590068C177 /* AnimalFactsView.swift */; };
 		029A057B2C569BEE0068C177 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A057A2C569BEE0068C177 /* NetworkService.swift */; };
 		029A057D2C569C170068C177 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A057C2C569C170068C177 /* Constants.swift */; };
+		029A057F2C56C89B0068C177 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A057E2C56C89B0068C177 /* RealmManager.swift */; };
+		029A05822C56C9350068C177 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 029A05812C56C9350068C177 /* RealmSwift */; };
+		029A05842C56C9830068C177 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A05832C56C9830068C177 /* RealmModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,8 @@
 		029A05782C569B590068C177 /* AnimalFactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFactsView.swift; sourceTree = "<group>"; };
 		029A057A2C569BEE0068C177 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		029A057C2C569C170068C177 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		029A057E2C56C89B0068C177 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		029A05832C56C9830068C177 /* RealmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029A05822C56C9350068C177 /* RealmSwift in Frameworks */,
 				029A05642C568FC90068C177 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				029A057A2C569BEE0068C177 /* NetworkService.swift */,
+				029A057E2C56C89B0068C177 /* RealmManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -143,6 +150,7 @@
 				029A05652C56910E0068C177 /* AnimalCategory.swift */,
 				029A05672C5691300068C177 /* AnimalFact.swift */,
 				029A05692C56914A0068C177 /* CategoryStatus.swift */,
+				029A05832C56C9830068C177 /* RealmModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 			name = AnimalFacts;
 			packageProductDependencies = (
 				029A05632C568FC90068C177 /* ComposableArchitecture */,
+				029A05812C56C9350068C177 /* RealmSwift */,
 			);
 			productName = AnimalFacts;
 			productReference = 029A054B2C568F0D0068C177 /* AnimalFacts.app */;
@@ -223,6 +232,7 @@
 			mainGroup = 029A05422C568F0D0068C177;
 			packageReferences = (
 				029A05622C568FC90068C177 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				029A05802C56C9350068C177 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 029A054C2C568F0D0068C177 /* Products */;
 			projectDirPath = "";
@@ -255,9 +265,11 @@
 				029A05732C569B200068C177 /* AnimalCategoriesView.swift in Sources */,
 				029A05662C56910E0068C177 /* AnimalCategory.swift in Sources */,
 				029A05512C568F0D0068C177 /* ContentView.swift in Sources */,
+				029A057F2C56C89B0068C177 /* RealmManager.swift in Sources */,
 				029A054F2C568F0D0068C177 /* AnimalFactsApp.swift in Sources */,
 				029A05752C569B330068C177 /* AnimalCategoriesFeature.swift in Sources */,
 				029A057D2C569C170068C177 /* Constants.swift in Sources */,
+				029A05842C56C9830068C177 /* RealmModels.swift in Sources */,
 				029A056A2C56914A0068C177 /* CategoryStatus.swift in Sources */,
 				029A056F2C569AC90068C177 /* ErrorView.swift in Sources */,
 				029A05682C5691300068C177 /* AnimalFact.swift in Sources */,
@@ -478,6 +490,14 @@
 				minimumVersion = 1.12.1;
 			};
 		};
+		029A05802C56C9350068C177 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.52.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -485,6 +505,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 029A05622C568FC90068C177 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		029A05812C56C9350068C177 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 029A05802C56C9350068C177 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -37,7 +37,8 @@ struct AnimalCategoriesView: View {
                         await viewStore.send(.onAppear).finish()
                     }
                 }
-                .navigationTitle(Text("", comment: "Empty title for the animal categories screen"))
+                .navigationTitle(Text("", comment: "Title for the animal categories screen"))
+                
                 .navigationDestination(
                     store: self.store.scope(
                         state: \.$destination,

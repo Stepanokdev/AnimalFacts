@@ -18,6 +18,12 @@ extension NetworkService: DependencyKey {
         fetchCategories: {
             let url = URL(string: Constants.baseURL + "animals.json")!
             
+            // Check if we have cached data and if it's not too old
+            if let lastRefresh = UserDefaults.standard.object(forKey: Constants.lastRefreshKey) as? Date,
+               Date().timeIntervalSince(lastRefresh) < 36 { // 1 hour cache
+                return RealmManager.shared.getCategories()
+            }
+            
             let (data, response) = try await URLSession.shared.data(from: url)
             
             guard let httpResponse = response as? HTTPURLResponse else {
@@ -32,7 +38,12 @@ extension NetworkService: DependencyKey {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let categories = try decoder.decode([AnimalCategory].self, from: data)
-                                
+                
+                // Cache the fetched data
+                RealmManager.shared.clearAllData()
+                RealmManager.shared.saveCategories(categories)
+                UserDefaults.standard.set(Date(), forKey: Constants.lastRefreshKey)
+                
                 return categories
             } catch {
                 throw NetworkError.decodingError(error)

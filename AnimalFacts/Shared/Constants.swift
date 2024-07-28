@@ -14,4 +14,5 @@ enum Constants {
     static let buttonHeight: CGFloat = 44
     
     static let baseURL = "https://raw.githubusercontent.com/AppSci/promova-test-task-iOS/main/"
+    static let lastRefreshKey = "lastRefreshTimestamp"
 }

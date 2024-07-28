@@ -56,14 +56,17 @@ struct AnimalCategoriesFeature: Reducer {
                 state.isLoading = true
                 return .run { send in
                     await send(.categoriesResponse(TaskResult { try await self.networkService.fetchCategories() }))
+                    
+                    // Start observing Realm changes
+                    for await categories in RealmManager.shared.observeCategories().values {
+                        await send(.updateCategories(categories))
+                    }
                 }
                 
             case let .categoriesResponse(.success(categories)):
                 state.isLoading = false
                 state.error = nil
-                return .run { send in
-                    await send(.updateCategories(categories))
-                }
+                return .none
                 
             case let .categoriesResponse(.failure(error)):
                 state.isLoading = false
